@@ -8,20 +8,28 @@
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
-	\fig{width = 1.00\textwidth}{figs/VLDB}
-	\fig{width = 1.00\textwidth}{figs/SIGMOD}
-	\fig{width = 0.90\textwidth}{figs/TPDS}
+	\begin{center}
+		(第一单位 \quad 通讯作者)
+		\fig{width = 1.00\textwidth}{figs/VLDB}
+		\vspace{0.60cm}
+		\fig{width = 1.00\textwidth}{figs/SIGMOD}
+		% \fig{width = 0.90\textwidth}{figs/TPDS}
+
+		\vspace{0.50cm}
+		\blue{\bf 分布式系统中的事务一致性理论}
+	\end{center}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
 	\begin{center}
-		数据库系统与客户程序的正确性是至关重要的
+		% 数据库系统与客户程序的正确性是至关重要的
+		{三大\red{\bf 事务一致性验证}问题}
 
 		\fig{width = 0.65\textwidth}{figs/problems}
 
-		{\small 三个事务一致性验证问题之间的递进关系}
+		{给定一条\blue{\bf 数据库系统执行历史}, 判定其是否满足某事务一致性}
 	\end{center}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
@@ -41,16 +49,20 @@
   \begin{center}
     \fig{width = 0.70\textwidth}{figs/checker-polysi}
   \end{center}
+
+	\vspace{0.30cm}
+	\begin{center}
+		{性能显著优于其它 SI 检测算法 {\small (在腾讯 TDSQL 开发过程初步测试)}}
+	\end{center}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%
-\begin{frame}{}
-	\centerline{性能显著优于其它 SI 检测算法 (在腾讯 TDSQL 开发过程初步测试)}
+% \begin{frame}{}
 
-	\fig{width = 0.60\textwidth}{figs/polysi-runtime}
-  %\#sessions=20, \#txns/session=100, \#ops/txn=15,   keys=10k,  \%read=50\%, distribution=zipfian.
-\end{frame}
+% 	\fig{width = 0.60\textwidth}{figs/polysi-runtime}
+%   %\#sessions=20, \#txns/session=100, \#ops/txn=15,   keys=10k,  \%read=50\%, distribution=zipfian.
+% \end{frame}
 %%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -62,26 +74,26 @@
 		\fig{width = 0.70\textwidth}{figs/solver-blackbox}
 		\vspace{0.30cm}
 
-		未能充分利用 SAT/SMT 搜索框架 (DPLL/CDCL)
+		% 未能充分利用 SAT/SMT 搜索框架 (DPLL/CDCL)
 	\end{center}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{}
-	\begin{center}
-		\blue{\bf 当前的探索:} 如何``深度整合 SMT'', 进一步提升算法效率?
+% \begin{frame}{}
+% 	\begin{center}
+% 		\blue{\bf 当前的探索:} 如何``深度整合 SMT'', 进一步提升算法效率?
 
-		\vspace{0.50cm}
-		\fig{width = 0.70\textwidth}{figs/integrated}
-	\end{center}
-\end{frame}
+% 		\vspace{0.50cm}
+% 		\fig{width = 0.70\textwidth}{figs/integrated}
+% 	\end{center}
+% \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
   \begin{center}
-		\red{\bf 进行中:} 设计专用的事务一致性理论求解器, 初见成效
+		\red{\bf 进行中:} 设计专用的\blue{\bf 事务一致性理论求解器}, 提升验证效率
 
 	  \fig{width = 0.95\textwidth}{figs/consistency-theory-solver-revised}
   \end{center}
@@ -91,7 +103,8 @@
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
 	\begin{center}
-		``基于深度整合 SMT 方案的事务一致性高效验证技术''
+		% ``基于深度整合 SMT 方案的
+		``数据库事务一致性高效验证技术研究''
 		\fig{width = 1.00\textwidth}{figs/roadmap}
 	\end{center}
 \end{frame}
@@ -104,8 +117,6 @@
 		  \fig{width = 1.00\textwidth}{figs/general-program-rejected}
 		\column{0.40\textwidth}
 		  \begin{center}
-				去年已结题
-
 				\fig{width = 1.00\textwidth}{figs/tencent-UR-logo}
 
 				\vspace{0.30cm}
@@ -115,7 +126,7 @@
 
 	\vspace{0.30cm}
 	\begin{center}
-	  \red{\bf 亟需加强项目申报}
+	  \red{\bf 加强项目申报}
 	\end{center}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
